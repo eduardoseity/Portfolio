@@ -1,0 +1,110 @@
+<style>
+    .nav-link {
+        color: paleturquoise;
+    }
+
+    footer {
+        background-color: #57a9d8;
+        text-align: center;
+        box-shadow: -2px -2px 20px #888;
+        margin-top: 25px;
+    }
+
+    .title {
+        font-size: 4vw;
+    }
+</style>
+
+<header style="background-color:paleturquoise;">
+    <img src="assets/images/title.png" style="width: 30vw;">
+    <span class="position-relative title" style="height:100%; display: inline-flex; align-items: center;">
+        Bem Vindo(a) ao Portfólio de
+        <br>
+        EDUARDO SEITY ISERI
+    </span>
+    <br>
+</header>
+<nav style="background-color: #326481; padding: 15px 0 0 0; box-shadow: inset 0 3px 25px paleturquoise;">
+    <ul class="nav nav-tabs" style="margin-left: 10px;" role="tablist" id="nav-tab">
+        <li class="nav-item">
+            <a id="nav-home-tab" [routerLink]="['/home']" routerLinkActive="router-link-active"
+                class="nav-link">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a id="nav-projetos-tab" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Projetos</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" [routerLink]="['/projetos/python']"
+                        routerLinkActive="router-link-active">Python</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/projetos/dotnet']"
+                        routerLinkActive="router-link-active">.NET</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/projetos/frontend']"
+                        routerLinkActive="router-link-active">Front-End</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/projetos/vbaexcel']"
+                        routerLinkActive="router-link-active">VBA Excel</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#"><i class="fab fa-github"></i> Visite o meu GitHub</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a id="nav-faq-tab" class="nav-link" [routerLink]="['/faq']" routerLinkActive="router-link-active">FAQ <i
+                    class="fas fa-question-circle"></i></a>
+        </li>
+        <li class="nav-item">
+            <a id="nav-contato-tab" class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contato <i
+                    class="fas fa-mobile-alt"></i></a>
+        </li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>
+    <section style="font-size: 1rem; padding: 5px 5px 5px 5px; background: #326481; color: paleturquoise;">
+        <i class="fab fa-instagram"></i>&nbsp;
+        <i class="fab fa-linkedin-in"></i>&nbsp;
+        <i class="fab fa-github-square"></i>&nbsp;
+        <i class="fab fa-whatsapp"></i>&nbsp;
+    </section>
+    <section
+        style="display: flex; justify-content: center; padding-top: 15px; padding-bottom: 15px; font-family: roboto; background-color: #333;">
+        <div style="width: 33.33%; text-align: start; margin-left: 5vw;" class="rem-0_6">
+            <i>
+                <b style="color:paleturquoise;">&lt;projetos&gt;</b>
+                <br>&nbsp;&nbsp;&nbsp;<a [routerLink]="['/projetos/python']"
+                    routerLinkActive="router-link-active">Python</a>
+                <br>&nbsp;&nbsp;&nbsp;<a [routerLink]="['/projetos/dotnet']"
+                    routerLinkActive="router-link-active">.NET</a>
+                <br>&nbsp;&nbsp;&nbsp;<a [routerLink]="['/projetos/frontend']"
+                    routerLinkActive="router-link-active">Front-End</a>
+                <br>&nbsp;&nbsp;&nbsp;<a [routerLink]="['/projetos/vbaexcel']" routerLinkActive="router-link-active">VBA
+                    Excel</a>
+                <br><b style="color:paleturquoise;">&lt;/projetos&gt;</b>
+            </i>
+        </div>
+        <div style="width: 33.33%; text-align: start;" class="rem-0_6">
+            <i>
+                <b style="color:paleturquoise;">&lt;suporte&gt;</b>
+                <br><b style="color:paleturquoise;">&lt;/suporte&gt;</b>
+            </i>
+        </div>
+        <div style="width: 33.33%; text-align: start; margin-right: 5vw;" class="rem-0_6">
+            <i>
+                <b style="color:paleturquoise;">&lt;contato&gt;</b>
+                <br><b style="color:paleturquoise;">&lt;/contato&gt;</b>
+            </i>
+        </div>
+    </section>
+    <section
+        style="font-size: 0.5rem; text-align: start; justify-content: center; padding: 5px 5px 5px 5px; background: #326481; color: paleturquoise;">
+        Feito com:
+        <i class="fas fa-heart"></i> Amor |
+        <i class="fas fa-coffee"></i> Café |
+        <i class="fab fa-angular"></i> Angular |
+        <i class="fab fa-bootstrap"></i> Bootstrap |
+        <i class="fab fa-css3-alt"></i> CSS |
+        <i class="fab fa-js-square"></i> JavaScript<br>
+    </section>
+</footer>

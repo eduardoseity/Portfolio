@@ -1,60 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Bootstrap 5 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-        
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <style>
-            .title {
-                font-size: 4vw;
-            }
-        </style>
+  <style>
+    @font-face {
+      font-family: standard;
+      src: url(/assets/fonts/VarelaRound-Regular.ttf);
+    }
 
-        <title>Eduardo Seity Iseri - Portfolio</title>
-    </head>
-    <body>
-        <div>
-            <img src="images/title.png" style="width: 30vw;">
-            <span class="position-relative title" style="height:100%; display: inline-flex; align-items: center;">
-                Bem Vindo(a) ao Portfólio de
-                <br>
-                EDUARDO SEITY ISERI
-            </span>
-            <br>
-        </div>
-        <ul class="nav nav-tabs" style="margin-left: 10px;">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projetos</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Python</a></li>
-                    <li><a class="dropdown-item" href="#">.NET</a></li>
-                    <li><a class="dropdown-item" href="#">Front-End</a></li>
-                    <li><a class="dropdown-item" href="#">Excel VBA</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#"><i class="fab fa-github"></i> Visite o meu GitHub</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="pages/faq.html">FAQ <i class="fas fa-question-circle"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contato <i class="fas fa-mobile-alt"></i></a>
-            </li>
-        </ul>
-        <br>
-        <p class="text-xl-start">
-            Não desista dos seus sonhos... <br>
-            Volte a dormir!
-        </p>
-    </body>
-</html>
+    @font-face {
+      font-family: roboto;
+      src: url(/assets/fonts/RobotoMono-VariableFont_wght.ttf);
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: standard;
+    }
+
+    @media screen and (min-width: 320px) {
+      html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      html {
+        font-size: 22px;
+      }
+    }
+
+    .rem-0_4 {
+      font-size: 0.4rem;
+    }
+
+    .rem-0_6 {
+      font-size: 0.6rem;
+    }
+
+    .rem-0_8 {
+      font-size: 0.8rem;
+    }
+
+    .rem-1 {
+      font-size: 1rem;
+    }
+
+    .rem-1_2 {
+      font-size: 1.2rem;
+    }
+
+    .rem-1_4 {
+      font-size: 1.4rem;
+    }
+
+    .rem-1_6 {
+      font-size: 1.6rem;
+    }
+
+    /* * {
+            border: 1px solid red;
+        } */
+  </style>
+
+  <title>Eduardo Seity Iseri - Portfolio</title>
+  <base href="/">
+<style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg,#ffffff26,#fff0);}*,:after,:before{box-sizing:border-box;}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth;}}body{margin:0;font-family:var(--bs-font-sans-serif);font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}</style><link rel="stylesheet" href="styles.193de70fce5847f29899.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.193de70fce5847f29899.css"></noscript></head>
+
+<body>
+  <app-root></app-root>
+<script src="runtime.36914e3a5e3401960b8e.js" defer></script><script src="polyfills.652fc90a801a7e0220a5.js" defer></script><script src="scripts.b0760a4fa05fc200dfbb.js" defer></script><script src="main.edbec1cdc6541e44e355.js" defer></script>
+
+</body></html>
